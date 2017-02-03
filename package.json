@@ -1,0 +1,35 @@
+{
+  "name": "messenger-bot-boilerplate",
+  "description": "A boilerplate for building Facebook Messenger Bot powered by Wit.ai",
+  "author": "Simply Technologies",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/SimplyTechnologies/messenger-bot-wit-boilerplate.git"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ],
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.6.0",
+    "express": "^4.14.0",
+    "lodash": "^4.17.4",
+    "mongoose": "^4.8.1",
+    "mongoose-q": "^0.1.0",
+    "morgan": "^1.7.0",
+    "node-uuid": "^1.4.7",
+    "node-wit": "^4.2.0",
+    "q": "^1.4.1",
+    "redis": "^2.6.5",
+    "request-promise": "^3.0.0",
+    "wit": "^1.3.4"
+  },
+  "engines": {
+    "node": "^6.0.0"
+  }
+}
