@@ -1,6 +1,6 @@
 # Facebook Messenger Chatbot Boilerplate
 Boilerplate project for developing Facebook Messenger Bot powered by Wit.ai, MongoDB and Redis as a session store.
-This boilerplate will allow you to bootstrap your chatbot within 10 minutes, all you need is wit.ai application setup, Facebook page, Facebook app and running MongoDB and Redis.
+This boilerplate will allow you to bootstrap your chatbot within 8 minutes, all you need is wit.ai application setup, Facebook page, Facebook app and running MongoDB and Redis.
 
 
 ## External dependencies 
@@ -83,6 +83,44 @@ enter the `FB_VERIFY_TOKEN` value and submit
   services/ 
     - custom services
   
+  app.js
+    - application entry point
+
+  graphAPI.js
+    - Facebook Graph API helper
+    
+  platformHelpers.js
+    - Helpers for generating message templates, e.g send location, quick replies and others
+    
+  routes.js
+    - express routes setup and message handler delegation
+
+  sessionStore.js
+    - Redis based session store
+    
+  wit.js
+    - wit.ai setup with actions loading
+    
+  witHelpers.js
+    - helpers for extracting entities from wit.ai response
+    
+  
 ```
 
-*made with love in Armenia by Simply Technologies <3*
+## The Roadmap
+
+- [x] Redis session store
+- [x] Automatic actions binding
+- [x] User info tracking in the database
+- [x] Saving last and previous geo locations shared by user
+- [x] Demo of send location, quick replies
+- [x] Shell scripts for adding greeting message, persistent menu and getting started button
+- [ ] Demo of generic template
+- [ ] Demo of list template
+- [ ] Unit tests
+
+---
+
+[ChatBotKitchen](https://www.chatbotkitchen.com) project
+
+*made with love ❤️ in Armenia by [Simply Technologies](http://www.simplytechnologies.net)*
