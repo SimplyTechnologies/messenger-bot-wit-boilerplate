@@ -89,6 +89,7 @@ function processMessage(messaging) {
 			if (!session.context.userData) {
 				return GraphAPI.getUserProfile(sender)
 					.then(user => {
+						user.recipientId = sender;
 						session.context.userData = user;
 						return data;
 					});

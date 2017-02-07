@@ -36,8 +36,11 @@ class GraphAPI {
 	sendBulkMessages(recipientId, messages) {
 		return messages.reduce((p, message) => {
 			return p.then(() => {
-				let delay = message.text && message.text.length * 10;
-				return Q.delay(delay || 500)
+				return this.sendTypingOn(recipientId)
+					.then(() => {
+						const delay = message.text && message.text.length * 20;
+						return Q.delay(delay || 500)	
+					})
 					.then(() => {
 						if (_.isString(message)) {
 							return this.sendPlainMessage(recipientId, message);
